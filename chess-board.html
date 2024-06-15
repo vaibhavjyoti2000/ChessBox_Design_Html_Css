@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess-Box</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .chess-board {
+        justify-content: center;
+        align-items: center;
+      }
+      .blocks {
+        width: 75px;
+        aspect-ratio: 1;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .row:nth-child(odd) .blocks:nth-child(odd),
+      .row:nth-child(even) .blocks:nth-child(even) {
+        background: wheat; /* blocks white-color */
+      }
+      .row:nth-child(even) .blocks:nth-child(odd),
+      .row:nth-child(odd) .blocks:nth-child(even) {
+        background: saddlebrown; /* blocks brown-color */
+      }
+      #box1,
+      #box8 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/560/606/original/3d-render-of-golden-rook-chess-piece-on-white-background-png.png");
+        background-size: 100%;
+      }
+      #box2,
+      #box7 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/786/721/original/3d-render-of-golden-knight-chess-piece-png.png");
+        background-size: 100%;
+      }
+      #box3,
+      #box6 {
+        background-image: url("https://static.vecteezy.com/system/resources/thumbnails/023/560/593/small_2x/3d-render-of-golden-bishop-chess-piece-on-white-background-png.png");
+        background-size: 100%;
+      }
+      #box4 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/560/592/original/3d-render-of-golden-king-chess-piece-on-white-background-png.png");
+        background-size: 100%;
+      }
+      #box5 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/750/805/original/3d-rendering-golden-queen-chess-piece-png.png");
+        background-size: 100%;
+      }
+      #box9 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/023/560/530/original/3d-render-of-golden-pawn-chess-piece-on-white-background-png.png");
+        background-size: 100%;
+      }
+      #box10 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/415/original/3d-rendering-black-pawn-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+        background-size: 100%;
+      }
+      #box11,
+      #box18 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/021/975/109/original/rook-3d-render-icon-illustration-with-transparent-background-chess-game-png.png");
+        background-size: 100%;
+      }
+      #box12,
+      #box17 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/405/original/3d-rendering-black-knight-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+        background-size: 100%;
+      }
+      #box13,
+      #box16 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/413/original/3d-rendering-black-bishop-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+        background-size: 100%;
+      }
+      #box14 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/409/original/3d-rendering-black-king-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+        background-size: 100%;
+      }
+      #box15 {
+        background-image: url("https://static.vecteezy.com/system/resources/previews/020/004/412/original/3d-rendering-black-queen-isolated-on-transparent-background-object-clipping-path-on-file-png.png");
+        background-size: 100%;
+      }
+      .heading {
+        display: flex;
+        justify-content: center;
+        align-items: top;
+        color: saddlebrown;
+        font: bold;
+        font-size: 2rem;
+        text-shadow: 2px 2px 5px brown;
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        letter-spacing: 20px;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chess-board">
+      <h1 class="heading">CHESS BOX</h1>
+      <div class="row">
+        <div class="blocks" id="box1"></div>
+        <div class="blocks" id="box2"></div>
+        <div class="blocks" id="box3"></div>
+        <div class="blocks" id="box4"></div>
+        <div class="blocks" id="box5"></div>
+        <div class="blocks" id="box6"></div>
+        <div class="blocks" id="box7"></div>
+        <div class="blocks" id="box8"></div>
+      </div>
+      <div class="row">
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+        <div class="blocks" id="box9"></div>
+      </div>
+      <div class="row">
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+      </div>
+      <div class="row">
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+      </div>
+      <div class="row">
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+      </div>
+      <div class="row">
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+        <div class="blocks"></div>
+      </div>
+      <div class="row">
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+        <div class="blocks" id="box10"></div>
+      </div>
+      <div class="row">
+        <div class="blocks" id="box11"></div>
+        <div class="blocks" id="box12"></div>
+        <div class="blocks" id="box13"></div>
+        <div class="blocks" id="box14"></div>
+        <div class="blocks" id="box15"></div>
+        <div class="blocks" id="box16"></div>
+        <div class="blocks" id="box17"></div>
+        <div class="blocks" id="box18"></div>
+      </div>
+    </div>
+  </body>
+</html>
